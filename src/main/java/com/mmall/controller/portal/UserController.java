@@ -78,7 +78,6 @@ public class UserController {
 
     public ServerResponse<String> forgetCheckAnswer(String username, String question,String answer){
 
-        System.out.println("hhh");
         return null;
     }
 
