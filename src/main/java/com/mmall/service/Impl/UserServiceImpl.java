@@ -96,6 +96,7 @@ public class UserServiceImpl implements IUserService {
             if (resultCount>0){
                 //说明问题及问题答案是当前用户，并且正确
                 String forgetToken = UUID.randomUUID().toString();
+                //将forgetToken放入本地cache中，并设置有效期
             }
             return null;
         }
