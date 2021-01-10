@@ -86,4 +86,21 @@ public class Category {
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
     }
+
+
+    //只要id相同就认为是相同，所以重写要同时把equal和hashcode以id作为判断因子
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Category category = (Category) o;
+
+        return id != null ? id.equals(category.id) : category.id == null;
+    }
+
+    @Override
+    public int hashCode() {
+        return id != null ? id.hashCode() : 0;
+    }
 }
